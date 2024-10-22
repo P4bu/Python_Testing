@@ -3,7 +3,7 @@ import unittest, os
 
 from src.bank_account import BankAccount
 
-class Bank_AccountTest(unittest.TestCase):
+class BankAccountTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.account = BankAccount(balance=1000, log_file='transaction_log.txt')

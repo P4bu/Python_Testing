@@ -14,3 +14,8 @@ def test_deposit_varios_ammounts(ammount, expected):
     account = BankAccount(balance=1000, log_file='transaction.txt')
     new_balance = account.deposit(ammount)
     assert new_balance == expected 
+
+def test_deposit_negative():
+    account = BankAccount(balance=1000, log_file='transaction.txt')
+    with pytest.raises(ValueError):
+        account.deposit(-100)
